@@ -1,0 +1,407 @@
+
+
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+body {
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+	margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;      
+}
+p {
+	font-size: .95em;
+	margin-bottom: 1.8em;
+}
+h2,
+h3,
+a {
+	color: #2A3A3F;
+}
+h2,
+h3 {
+	margin-top: 0;
+    text-align: center;
+}
+a {
+	text-decoration: none;
+}
+img {
+	width: 100%;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+/* ---- Sticky Footer ---- */
+body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 100vh;
+}
+/*apply flex:1; to parent container of main content*/
+#expertise {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+}
+/* ---- End Sticky Footer ---- */
+
+/* ---- Navigation ---- */
+.header-wrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+/* --- Fix for Admin Bar Overlapping Navbar -- */
+.admin-bar .header-wrapper {
+    top: 32px;
+}
+
+@media screen and (max-width: 600px){
+    #wpadminbar {
+       position: fixed !important;
+  }
+}
+/* --- End Fix for Admin Bar Overlapping Navbar -- */
+
+.header-logo {
+    width:auto;
+}
+
+.name {
+	font-size: 1.35em;
+	margin: 0;
+}
+
+.main-nav {
+    border-top: 1px solid rgba(255,255,255,.1);
+}
+
+.main-nav li:hover {
+    background:black;
+}
+
+.name a,
+.main-nav a {
+	text-align: center;
+	display: block;
+	padding: 10px 15px;
+}
+.main-nav a {
+	font-size: .95em;
+	color: #9d9d9d;
+	text-transform: uppercase;
+}
+.main-nav a:hover {
+	color: #fff;
+}
+
+#work {
+    background: #eee;
+}
+#work .secondary {
+    margin-top: 31px;
+}
+
+/* ---- Layout Containers ---- */
+.main-header {
+    width: 100%;
+}
+
+.expertise-header,
+.row {
+    width: 90%;
+    margin: 0 auto;
+}
+.header-wrapper {
+    background: #222222;
+}
+
+.main-header {
+    background: #222222;
+}
+.banner,
+.main-footer {
+	text-align: center;
+}
+.banner {
+	color: #fff;
+	background: url('../images/computer-code-hero.jpg') 50% 0 no-repeat fixed;
+	padding: 3.2em 0;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.col {
+	padding-right: 1em;/*gutter*/
+	padding-left: 1em;/*gutter*/
+    text-align: center;
+}
+
+#expertise p {
+    text-align: center;    
+}
+
+.main-footer {
+    color: #fff;
+	background: #2A3A3F;
+	padding: 5em 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo {
+    width: auto;
+    margin: 10px;
+}
+
+footer span {
+    margin-bottom: 20px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+section#banner {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+section#expertise {
+    padding-bottom: 250px;
+}
+
+#work .row {
+   margin-bottom: 31px; 
+}
+
+/* ---- Page Elements ---- */
+/*button hover effect styles*/
+.banner-items .button {
+    border: none;
+    border-radius: 50px;
+    border: 2px solid #FDCD3B;
+    background-color: transparent;
+    color: #fff;
+    display:block;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: auto;
+    margin-top: 31px;
+    transition: color 0.2s 0.3s, background-color 0.3s ease-in-out, width 0.3s 0s;
+    width: 175px;
+}
+
+.banner-items .button:hover {
+    width: 200px;
+    color: #2A3A3F;
+    background-color: #FDCD3B;
+    border: 2px solid #FDCD3B;
+}
+
+.button {
+    border: none;
+    border-radius: 50px;
+    border: 2px solid #FDCD3B;
+    background-color: transparent;
+    color: #2A3A3F;
+    display:block;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: auto;
+    margin-top: 31px;
+    transition: color 0.2s 0.3s, background-color 0.3s ease-in-out, width 0.3s 0s;
+    width: 175px;
+}
+
+.button:hover {
+    width: 200px;
+    color: #FDCD3B;
+    background-color: #2A3A3F;
+    border: 2px solid #2A3A3F;
+}
+/*End button hover effect styles*/
+.col i.fa {
+    font-size: 4em;
+    color: #FDCD3B;
+    margin-right: .7em;
+    width: 30px;
+}
+    
+.headline {
+	margin-bottom: 0;
+    margin-top: 0;
+}
+hr {
+    width: 90%;
+    margin-bottom: 35px;
+    border-top: 1px solid #A9A9A9;
+}
+
+.feat-img {
+	border-radius: 5px;
+}
+
+#work li {
+    font-weight: 900;
+    font-size: .8rem;
+}
+
+#work li::before {
+    content: "\2022";
+    margin-right: 7px;
+    color: #FDCD3B;
+    font-size: 1.1rem;
+}
+/*Image hover effect*/
+.wrapper {
+    width: 100%;/*controls image width and height*/
+    position: relative;
+}
+.wrapper img{
+    display:block;
+    width:100%;
+    height: auto;
+}
+.content i.fa {
+     /*styles the icon*/
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color:#fff;
+}
+.overlay {
+    /*positions this div on top of the image*/
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    height:100%;
+    opacity:0;
+    transition: .8s ease;
+    background-color: #FDCD3B;
+}
+.wrapper:hover .overlay{
+    opacity:.7;
+}
+/*End image hover effect*/
+
+/*
+.social-badge {
+    background-color: #777;
+    font-size: 24px;
+    margin: 0 5px 20px 0;
+    padding: 4px;
+    border-radius: 50px;
+    color: white;
+}
+
+.social-badge:hover {
+    background: #FDCD3B;
+}
+
+i.fa-twitter, i.fa-linkedin, i.fa-github {
+   padding: 4px; 
+}
+*/
+
+.social-badges {
+  list-style: none;
+  font-size: 24px;
+}
+
+.social-badges li {
+  display: inline-block;
+  background-color: #777;
+  margin: 5px;
+  border-radius: 50%;
+}
+
+.social-badges a {
+  color: white;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  height: 40px;
+  width: 40px;
+  text-decoration:none;
+}
+
+.social-badges i {
+    padding-top: 7px;
+}
+
+.social-badges li:hover {
+  background: #FDCD3B;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+/*--- Fixed Navbar ---*/    
+/*
+    body {
+        padding-top: 50px;
+    }
+*/
+	.header-wrapper {
+		position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+	}
+/*--- End fixed Navbar ---*/   
+    
+	.tagline {
+		font-size: 1.4em;
+	}
+	#expertise .primary,
+	#expertise .secondary,
+	#expertise .tertiary {
+		width: 33%;
+	}
+    #work ul,
+    #work p {
+        text-align: left;
+    }
+    #work .secondary {
+    margin-top: 0;
+    }
+    
+}
+@media (min-width: 1025px) {
+	.main-header,
+	.row {
+		width: 80%;
+		max-width: 1150px;
+	}
+    
+    .main-nav a {
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+}
